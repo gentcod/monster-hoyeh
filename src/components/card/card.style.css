@@ -9,18 +9,46 @@
    cursor: pointer;
 }
 
+@media only screen and (max-width: 37.5em) {
+   .monster-card {
+     width: 18rem;
+     height: 25rem;
+   }
+}
+
 .monster-card img {
    margin-top: 5rem;
    margin-bottom: 5rem;
 }
 
+@media only screen and (max-width: 37.5em) {
+   .monster-card img{
+      width: 80%;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+   }
+}
+
+
 .monster-card h1 {
    font-size: 2rem;
    margin-bottom: 5rem;
 }
+@media only screen and (max-width: 37.5em) {
+   .monster-card h1 {
+      font-size: 1.6rem;
+      margin-bottom: 2rem;
+   }
+}
 
 .monster-card p {
    font-size: 1.6rem;
+}
+
+@media only screen and (max-width: 37.5em) {
+   .monster-card p {
+      font-size: 1.4rem;
+   }
 }
 
 .monster-card:hover {
