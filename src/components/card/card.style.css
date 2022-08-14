@@ -1,0 +1,50 @@
+.monster-card {
+   background-color: hsl(158, 39%, 80%);
+   color: #1f2f5f;
+   padding: 1rem;
+   height: 50rem;
+   width: 35rem;
+   border-radius: 3px;
+   backface-visibility: hidden;
+   cursor: pointer;
+}
+
+.monster-card img {
+   margin-top: 5rem;
+   margin-bottom: 5rem;
+}
+
+.monster-card h1 {
+   font-size: 2rem;
+   margin-bottom: 5rem;
+}
+
+.monster-card p {
+   font-size: 1.6rem;
+}
+
+.monster-card:hover {
+   animation: zoom .7s ease 5;
+   animation-fill-mode: backwards;
+   border: 1px solid #eee;
+   background-color: hsl(159, 16%, 37%);
+   color: #eee;
+}
+
+@keyframes zoom {
+   0% {
+      transform: scale(1);
+   }
+
+   25% {
+      transform: scale(1.2);
+   }
+
+   50% {
+      transform: scale(1);
+   }
+
+   100% {
+      transform: scale(1.05);
+   }
+}

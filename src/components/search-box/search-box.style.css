@@ -1,0 +1,12 @@
+.search-box {
+  margin-top: 5rem;
+   -webkit-appearance: none;
+   border: none;
+   outline: none;
+   padding: 1rem;
+   width: 15rem;
+   line-height: 3rem;
+   margin-bottom: 2rem;
+   text-align: center;
+   border-bottom: .5rem solid #1c383d;
+ }
