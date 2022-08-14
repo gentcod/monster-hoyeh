@@ -61,8 +61,11 @@ import './App.css';
 const App = () => {
 
   const [searchField, setSearchValue] = useState(''); //returns an array of two values; [value, setValue callback].. the setValue callback is used to change the state of the value
+  // const [title, setTitle] = useState('');
   const [monsters, setMonsters] = useState([]);
   const [filteredMonsters, setFilteredMonsters] = useState(monsters);
+
+  // console.log('rendered')
 
   useEffect(() => {
     fetch('https://jsonplaceholder.typicode.com/users')
@@ -82,12 +85,21 @@ const App = () => {
   const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLocaleLowerCase();
     setSearchValue(searchFieldString)
-  };
+  };  
+  
+  // const onTitleChange = (event) => {
+  //   const titleString = event.target.value.toLocaleLowerCase();
+  //   setTitle(titleString)
+  // };
 
   return (
     <div className="App">
       <h1 className='app-header'>Hoyeh Monsters</h1>
+      {/* <h1 className='app-header'>{title}</h1> */}
+      
       <SearchBox onChangeHandler={onSearchChange} placeholder='search monsters' className='monsters-search-box'/>
+      {/* <br/>
+      <SearchBox onChangeHandler={onTitleChange} placeholder='set title' className='title-search-box'/> */}
       <CardList monsters={filteredMonsters} className='monster-card-list'/>
     </div>
   );
