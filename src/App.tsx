@@ -1,13 +1,14 @@
 // import { Component } from 'react';
 import { useState, useEffect, ChangeEvent } from 'react';
 
-import CardList from './components/card-list/card-list.component.jsx';
+import CardList from './components/card-list/card-list.component';
 import SearchBox from './components/search-box/search-box-component';
 
 import { getData } from './utils/data.utils';
 import './App.css';
 
-type Monster = {
+export type Monster = {
+  username: string;
   id: string;
   name: string;
   email: string;
@@ -62,7 +63,7 @@ const App = () => {
       <SearchBox onChangeHandler={onSearchChange} placeholder='search monsters' className='monsters-search-box'/>
       {/* <br/>
       <SearchBox onChangeHandler={onTitleChange} placeholder='set title' className='title-search-box'/> */}
-      <CardList monsters={filteredMonsters} className='monster-card-list'/>
+      <CardList monsters={filteredMonsters}/>
     </div>
   );
 }

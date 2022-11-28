@@ -1,11 +1,16 @@
 // import { Component } from "react";
-import Card from "../card/card.component.jsx";
-import './card-list.style.css'
+import { Monster } from "../../App";
+import Card from "../card/card.component";
+// import './card-list.style.css'
 
-import {CardListContainer} from './card-list-styles';
+import {CardListContainer} from './card-list.styles';
+
+type CardListProps = {
+   monsters: Monster[];
+}
 
 //Functional Component
-const CardList = ({monsters, className}) => {
+const CardList = ({monsters}: CardListProps) => {
    return (
       <CardListContainer>
          {monsters.map((monster) => {
